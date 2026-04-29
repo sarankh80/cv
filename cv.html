@@ -1,1 +1,335 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khmer24 Clone - Online Market in Cambodia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .category-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .category-card img {
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .btn-sell {
+            background-color: #ff8c00;
+            transition: background-color 0.2s;
+        }
+
+        .btn-sell:hover {
+            background-color: #e67e00;
+        }
+
+        .ad-card {
+            transition: box-shadow 0.2s;
+        }
+
+        .ad-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white border-b sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+            <!-- Logo -->
+            <div class="flex items-center gap-4">
+                <div class="text-2xl font-black italic tracking-tighter">
+                    khmer<span class="text-orange-500">24</span>
+                </div>
+                <div class="hidden md:flex items-center gap-2 text-sm text-gray-500">
+                    <img src="https://flagcdn.com/w20/gb.png" alt="English" class="w-5 h-3">
+                    <i class="fa-solid fa-moon cursor-pointer"></i>
+                </div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="flex-grow max-w-2xl flex items-center border rounded-md overflow-hidden bg-gray-50">
+                <button class="px-4 py-2 text-sm border-r bg-white text-gray-600 hidden sm:block">
+                    All Categories <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
+                </button>
+                <input type="text" placeholder="What are you looking for..." class="w-full px-4 py-2 bg-transparent outline-none text-sm">
+                <button class="px-4 text-gray-400">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+
+            <!-- Auth & Action -->
+            <div class="flex items-center gap-4 text-sm font-medium">
+                <a href="#" class="text-blue-600 hover:underline">Login</a>
+                <span class="text-gray-300">|</span>
+                <a href="#" class="text-blue-600 hover:underline">Register</a>
+                <button class="btn-sell text-white px-4 py-2 rounded flex items-center gap-2">
+                    <i class="fa-solid fa-camera"></i> Sell
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-6">
+        
+        <!-- Banner Section -->
+        <section class="mb-8">
+            <div class="w-full bg-sky-400 rounded-lg overflow-hidden relative flex items-center justify-center p-8 text-white text-center min-h-[200px]">
+                <!-- Mockup Banner Content -->
+                <div class="z-10">
+                    <h1 class="text-3xl font-bold mb-2">មុខងារថ្មី!</h1>
+                    <p class="text-lg opacity-90">ចាប់ផ្ដើមដំណើការ</p>
+                    <div class="mt-4 bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 inline-block border border-white/30">
+                        ផ្សព្វផ្សាយ Video Ad លើ Khmer24
+                    </div>
+                </div>
+                <!-- Abstract Shapes -->
+                <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-20 -mt-20"></div>
+                <div class="absolute bottom-0 left-0 w-48 h-48 bg-sky-500 rounded-full -ml-10 -mb-10"></div>
+            </div>
+            <p class="mt-6 text-center text-xl text-gray-600">
+                Welcome to <span class="font-bold">khmer24.com</span>, the biggest online market in Cambodia.
+            </p>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="mb-10 bg-white p-6 rounded-xl shadow-sm border">
+            <h2 class="text-lg font-bold mb-6">Browse By Category</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-y-8 gap-x-4">
+                
+                <!-- Category Item -->
+                <div class="category-card flex flex-col items-center text-center cursor-pointer group">
+                    <div class="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mb-2 overflow-hidden">
+                        <span class="text-3xl">🚗</span>
+                    </div>
+                    <span class="text-xs font-medium group-hover:text-blue-600">Cars and Vehicles</span>
+                </div>
+
+                <div class="category-card flex flex-col items-center text-center cursor-pointer group">
+                    <div class="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mb-2 overflow-hidden">
+                        <span class="text-3xl">📱</span>
+                    </div>
+                    <span class="text-xs font-medium group-hover:text-blue-600">Phones & Tablets</span>
+                </div>
+
+                <div class="category-card flex flex-col items-center text-center cursor-pointer group">
+                    <div class="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mb-2 overflow-hidden">
+                        <span class="text-3xl">💻</span>
+                    </div>
+                    <span class="text-xs font-medium group-hover:text-blue-600">Computers & Accessories</span>
+                </div>
+
+                <div class="category-card flex flex-col items-center text-center cursor-pointer group">
+                    <div class="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mb-2 overflow-hidden">
+                        <span class="text-3xl">📺</span>
+                    </div>
+                    <span class="text-xs font-medium group-hover:text-blue-600">Electronics & Appliances</span>
+                </div>
+
+                <div class="category-card flex flex-col items-center text-center cursor-pointer group">
+                    <div class="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mb-2 overflow-hidden">
+                        <span class="text-3xl">🏠</span>
+                    </div>
+                    <span class="text-xs font-medium group-hover:text-blue-600">House & Land</span>
+                </div>
+
+                <div class="category-card flex flex-col items-center text-center cursor-pointer group">
+                    <div class="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mb-2 overflow-hidden">
+                        <span class="text-3xl">💼</span>
+                    </div>
+                    <span class="text-xs font-medium group-hover:text-blue-600">Jobs</span>
+                </div>
+
+                <div class="category-card flex flex-col items-center text-center cursor-pointer group">
+                    <div class="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mb-2 overflow-hidden">
+                        <span class="text-3xl">🤝</span>
+                    </div>
+                    <span class="text-xs font-medium group-hover:text-blue-600">Services</span>
+                </div>
+
+                <div class="category-card flex flex-col items-center text-center cursor-pointer group">
+                    <div class="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mb-2 overflow-hidden">
+                        <span class="text-3xl">👕</span>
+                    </div>
+                    <span class="text-xs font-medium group-hover:text-blue-600">Fashion & Beauty</span>
+                </div>
+
+                <div class="category-card flex flex-col items-center text-center cursor-pointer group">
+                    <div class="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mb-2 overflow-hidden">
+                        <span class="text-3xl">🛋️</span>
+                    </div>
+                    <span class="text-xs font-medium group-hover:text-blue-600">Furniture & Decor</span>
+                </div>
+
+                <div class="category-card flex flex-col items-center text-center cursor-pointer group">
+                    <div class="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mb-2 overflow-hidden">
+                        <span class="text-3xl">⚽</span>
+                    </div>
+                    <span class="text-xs font-medium group-hover:text-blue-600">Books, Sports & Hobbies</span>
+                </div>
+
+                <div class="category-card flex flex-col items-center text-center cursor-pointer group">
+                    <div class="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mb-2 overflow-hidden">
+                        <span class="text-3xl">🐕</span>
+                    </div>
+                    <span class="text-xs font-medium group-hover:text-blue-600">Pets</span>
+                </div>
+
+                <div class="category-card flex flex-col items-center text-center cursor-pointer group">
+                    <div class="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mb-2 overflow-hidden">
+                        <span class="text-3xl">🍔</span>
+                    </div>
+                    <span class="text-xs font-medium group-hover:text-blue-600">Foods</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top Ads Section -->
+        <section>
+            <div class="bg-sky-400 text-white px-4 py-2 rounded-t-lg font-bold">
+                Top Ads
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-4">
+                
+                <!-- Ad Card 1 -->
+                <div class="ad-card bg-white border rounded-lg overflow-hidden flex flex-col">
+                    <div class="aspect-square bg-gray-200 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1542362567-b05503f3af15?auto=format&fit=crop&q=80&w=400" alt="Car" class="w-full h-full object-cover">
+                        <div class="absolute bottom-2 right-2 bg-black/50 text-white text-[10px] px-1 rounded">
+                            <i class="fa-solid fa-camera mr-1"></i> 13
+                        </div>
+                    </div>
+                    <div class="p-3 flex flex-col flex-grow">
+                        <h3 class="text-xs font-medium line-clamp-2 mb-1">ឡានលក់បន្ទាន់ តម្លៃសមរម្យ បំផុតគ្រប់ប្រភេទ</h3>
+                        <p class="text-[10px] text-gray-500 mb-2">Dec 24 • Chrouy Changva, Phnom Penh</p>
+                        <div class="mt-auto flex items-center justify-between">
+                            <span class="text-red-600 font-bold">$34,600</span>
+                            <i class="fa-regular fa-heart text-gray-400 cursor-pointer hover:text-red-500"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ad Card 2 -->
+                <div class="ad-card bg-white border rounded-lg overflow-hidden flex flex-col">
+                    <div class="aspect-square bg-blue-50 relative flex items-center justify-center p-4">
+                        <div class="text-center">
+                            <p class="text-red-600 font-black text-sm uppercase">répertoireculinaireKH</p>
+                            <p class="text-[8px] text-gray-400">Quality without compromise</p>
+                        </div>
+                    </div>
+                    <div class="p-3 flex flex-col flex-grow border-t">
+                        <h3 class="text-xs font-medium line-clamp-2 mb-1">Sale Administrator</h3>
+                        <p class="text-[10px] text-gray-500 mb-2">Apr 11 • Chamkar Mon, Phnom Penh</p>
+                        <div class="mt-auto flex items-center justify-between">
+                            <span class="text-red-600 font-bold">$500+</span>
+                            <i class="fa-regular fa-heart text-gray-400 cursor-pointer"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ad Card 3 -->
+                <div class="ad-card bg-white border rounded-lg overflow-hidden flex flex-col">
+                    <div class="aspect-square bg-gray-200 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1558981403-c5f91cbba527?auto=format&fit=crop&q=80&w=400" alt="Motorbike" class="w-full h-full object-cover">
+                        <div class="absolute bottom-2 right-2 flex gap-1">
+                             <div class="bg-green-600 text-white text-[10px] px-1 rounded flex items-center">
+                                <i class="fa-solid fa-truck mr-1"></i> Free
+                            </div>
+                            <div class="bg-black/50 text-white text-[10px] px-1 rounded">
+                                <i class="fa-solid fa-camera mr-1"></i> 4
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3 flex flex-col flex-grow">
+                        <h3 class="text-xs font-medium line-clamp-2 mb-1">wave gne 026 ថ្មីកេះ តម្លៃ 850$ បង់រំលស់...</h3>
+                        <p class="text-[10px] text-gray-500 mb-2">23h • Kamboul, Phnom Penh</p>
+                        <div class="mt-auto flex items-center justify-between">
+                            <span class="text-red-600 font-bold">$850</span>
+                            <i class="fa-regular fa-heart text-gray-400 cursor-pointer"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ad Card 4 -->
+                <div class="ad-card bg-white border rounded-lg overflow-hidden flex flex-col">
+                    <div class="aspect-square bg-gray-200 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=400" alt="Land" class="w-full h-full object-cover">
+                        <div class="absolute bottom-2 right-2 bg-black/50 text-white text-[10px] px-1 rounded">
+                            <i class="fa-solid fa-camera mr-1"></i> 5
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                             <div class="bg-red-600/80 text-white text-[10px] font-bold p-1 rounded border border-white">FOR SALE</div>
+                        </div>
+                    </div>
+                    <div class="p-3 flex flex-col flex-grow">
+                        <h3 class="text-xs font-medium line-clamp-2 mb-1">ដី 6A សម្រាប់លក់ (Land For Sale)</h3>
+                        <p class="text-[10px] text-gray-500 mb-2">Mar 5 • Chrouy Changva, Phnom Penh</p>
+                        <div class="mt-auto flex items-center justify-between">
+                            <span class="text-red-600 font-bold">$750</span>
+                            <i class="fa-regular fa-heart text-gray-400 cursor-pointer"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ad Card 5 -->
+                <div class="ad-card bg-white border rounded-lg overflow-hidden flex flex-col">
+                    <div class="aspect-square bg-gray-200 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=400" alt="Truck" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-3 flex flex-col flex-grow">
+                        <h3 class="text-xs font-medium line-clamp-2 mb-1">Ford xl2024 limited edition color white</h3>
+                        <p class="text-[10px] text-gray-500 mb-2">1d • Tuol Kouk, Phnom Penh</p>
+                        <div class="mt-auto flex items-center justify-between">
+                            <span class="text-red-600 font-bold">$36,500</span>
+                            <i class="fa-regular fa-heart text-gray-400 cursor-pointer"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="mt-20 border-t bg-white py-10">
+        <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div>
+                <h4 class="font-bold mb-4">About</h4>
+                <ul class="text-sm text-gray-500 space-y-2">
+                    <li><a href="#" class="hover:text-blue-600">Company Profile</a></li>
+                    <li><a href="#" class="hover:text-blue-600">Terms and Conditions</a></li>
+                    <li><a href="#" class="hover:text-blue-600">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Support</h4>
+                <ul class="text-sm text-gray-500 space-y-2">
+                    <li><a href="#" class="hover:text-blue-600">Help Center</a></li>
+                    <li><a href="#" class="hover:text-blue-600">Safety Tips</a></li>
+                    <li><a href="#" class="hover:text-blue-600">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-span-2">
+                <h4 class="font-bold mb-4">Subscribe to our newsletter</h4>
+                <div class="flex gap-2">
+                    <input type="email" placeholder="Enter your email" class="flex-grow border rounded px-3 py-2 text-sm">
+                    <button class="bg-gray-800 text-white px-4 py-2 rounded text-sm">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto px-4 mt-10 pt-6 border-t text-center text-xs text-gray-400">
+            © 2024 Khmer24 Clone. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
